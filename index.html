@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+            body{
+            background-color: #333333;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #444444;
+            box-shadow: 0 0 10px rgba(255, 0, 212, 0.5);
+            transition: box-shadow 0.3s ease-in-out;
+            margin: 20px auto;
+            width: fit-content;
+            color: #fff;
+            font-size: 50px;
+        }
+
+        body:hover {
+            box-shadow: 0 0 20px rgba(225, 0, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+     var a = 2, b = 1;
+var result = --a - --b + ++b + b--; 
+
+// --a: a se 1 minus kar ke, a ban gaya 1
+// --a - --b: 
+//     a abhi bhi 1 hai
+//     --b: b se 1 minus kar ke, b ban gaya 0
+//     ab tak ka result: 1 - 0 = 1
+
+// --a - --b + ++b: 
+//     ab tak ka result: 1
+//     ++b: b mein 1 add karke, b ban gaya 1
+//     ab tak ka result: 1 + 1 = 2
+
+// --a - --b + ++b + b--: 
+//     ab tak ka result: 2
+//     b--: b ka current value (1) use karke, phir b se 1 minus karenge
+//     result: 2 + 1 = 3 (phir b ban gaya 0)
+
+document.write("a is " + a + "<br>");       // a ban gaya 1
+document.write("b is " + b + "<br>");       // b ban gaya 0
+document.write("result is " + result ); // result ban gaya 3
+
+
+
+    </script>
+</body>
+</html>
